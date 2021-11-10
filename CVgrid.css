@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(white);
+}
+
+#GridContainer {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'left main main'
+        'left main main'
+        ;
+}
+
+#Item1 {
+    grid-area: header;
+    width: 100%;
+    background-color: yellow;
+    height: 33vh;
+    padding: 10px;
+}
+
+#Item2 {
+    grid-area: left;
+    width: 100%;
+    background-color: blue;
+    height: 66vh;
+}
+
+#Item3 {
+    grid-area: main;
+    width: 100%;
+    background-color: red;
+    height: 66vh;
+}
+
+/*RWD*/
+@media only screen and (max-width: 600px){
+    body{background-color:green;}
+    #GridContainer {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'left'
+            'main'
+            ;
+    }
+}
