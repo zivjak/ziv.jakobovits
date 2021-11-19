@@ -6,8 +6,8 @@ body {
     display: grid;
     grid-template-areas:
         'header header header'
-        'left main main'
-        'left main main'
+        'left main button'
+        'left main button'
         ;
 }
 
@@ -33,6 +33,24 @@ body {
     height: 66vh;
 }
 
+button{
+    grid-area: button;
+    height: 20%;
+    font-size: 50px;
+    background-color: yellow;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+}
+
+@keyframes blink {
+    0% {background-color: yellow; border-radius: 0%;}
+    25% {background-color: white; border-radius: 50%;}
+    50% {background-color: yellow; border-radius: 100%;}
+    75% {background-color: white; border-radius: 50%;}
+    100% {background-color: yellow;border-radius: 0%;}
+}
+
 /*RWD*/
 @media only screen and (max-width: 600px){
     body{background-color:green;}
@@ -42,6 +60,7 @@ body {
             'header'
             'left'
             'main'
+            'button'
             ;
     }
 }
